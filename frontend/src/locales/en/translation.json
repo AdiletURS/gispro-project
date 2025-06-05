@@ -1,0 +1,215 @@
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "contacts": "Contact Details",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "welcome": "Welcome to GISPRO",
+    "subtitle": "GISPRO is your reliable partner in geographic information systems. We offer a full range of services for the development, support, and integration of GIS solutions.",
+    "description": "Our specialists will help you automate processes and generate analytical reports by integrating GIS into your business operations.",
+    "button": "LEARN ABOUT GISPRO"
+  },
+  "servicesTabs": {
+    "heading": "Our Services",
+    "itLabel": "IT & Development",
+    "itTitle": "Full-Cycle IT Development",
+    "itDescription": "Our team delivers turnkey IT solutions, from requirements analysis through to product support. We build user-friendly web interfaces, scalable backends, and ensure the reliability of every line of code.",
+    "itPoint1": "Requirements analysis & architecture design",
+    "itPoint2": "UI/UX design & prototyping",
+    "itPoint3": "Frontend: React, TypeScript, MUI",
+    "itPoint4": "Backend: Node.js, Express, databases",
+    "itPoint5": "Testing, CI/CD & technical support",
+    "gisLabel": "Surveying & GIS",
+    "gisTitle": "Surveying and GIS Services",
+    "gisDescription": "We provide a full spectrum of surveying work and implement modern GIS solutions. From topographic surveys to publishing geodata in interactive portals—ensuring accuracy and efficiency in your projects.",
+    "gisPoint1": "Topographic surveying & investigations",
+    "gisPoint2": "3D modeling & data digitization",
+    "gisPoint3": "Creation of digital maps",
+    "gisPoint4": "GIS portal development & support",
+    "gisPoint5": "Satellite & drone imagery processing",
+    "designLabel": "Design",
+    "designTitle": "Architectural & Engineering Design",
+    "designDescription": "We specialize in master planning, residential and public building design, and infrastructure projects. Our solutions blend creative design, energy efficiency, and strict compliance with GOST and ISO standards.",
+    "designPoint1": "Master planning of settlements",
+    "designPoint2": "Residential & public building design",
+    "designPoint3": "Engineering systems & energy efficiency",
+    "designPoint4": "Environmental & regulatory expertise",
+    "designPoint5": "Permit approvals support",
+    "constructionLabel": "Construction",
+    "constructionTitle": "Turnkey Construction",
+    "constructionDescription": "We offer a complete cycle of construction works—from site preparation to turnkey delivery. We rely on proven materials, experienced crews, and effective project management.",
+    "constructionPoint1": "Earthworks & site preparation",
+    "constructionPoint2": "Foundation & monolithic work",
+    "constructionPoint3": "Wall erection & roofing",
+    "constructionPoint4": "Engineering networks & utilities",
+    "constructionPoint5": "Finishing & landscaping",
+    "analyticsLabel": "Analytics",
+    "analyticsTitle": "Analytical Solutions",
+    "analyticsDescription": "We offer a full range of analytical services: data collection, processing, visualization, and predictive model building to optimize your business.",
+    "analyticsPoint1": "Data collection and aggregation from various sources",
+    "analyticsPoint2": "Cleaning and preparation of large datasets",
+    "analyticsPoint3": "Statistical analysis and descriptive analytics",
+    "analyticsPoint4": "Predictive modeling and machine learning",
+    "analyticsPoint5": "Interactive dashboards and visualization"
+  },
+  "casesSection": {
+    "heading": "Our Projects",
+    "case1": {
+      "title": "City GIS",
+      "description": "An interactive city map with infrastructure overlays and analytical layers."
+    },
+    "case2": {
+      "title": "Tourist Navigator",
+      "description": "A mobile app with offline maps, routes, and voice navigation."
+    },
+    "case3": {
+      "title": "Monitoring Platform",
+      "description": "An online real-time monitoring system for industrial facilities."
+    },
+    "learnMore": "Learn More"
+  },
+  "processAnimation": {
+    "heading": "How We Work",
+    "subtext": "From topographic surveying to a finished web interface—every step is transparent and clear."
+  },
+  "achievementsSection": {
+    "heading": "Our Achievements",
+    "stats": [
+      "Years in Business",
+      "Successful Projects",
+      "Satisfied Clients",
+      "Employees on Staff",
+      "Countries Served",
+      "Partner Companies"
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "description": "We develop software and execute projects utilizing advanced geotechnologies. We offer cost-effective yet sophisticated GIS solutions with reliable long-term support.",
+    "contactButton": "Contact Us"
+  },
+  "aboutCompany": {
+    "heading": "About the Company",
+    "facts": [
+      "Operating since 2014",
+      "200+ Solutions Delivered",
+      "Kyrgyzstan, CIS, EAEU"
+    ],
+    "advantages": [
+      {
+        "icon": "BuildOutlinedIcon",
+        "text": "Proprietary Solutions"
+      },
+      {
+        "icon": "SupportAgentOutlinedIcon",
+        "text": "24/7 Support"
+      },
+      {
+        "icon": "VerifiedOutlinedIcon",
+        "text": "GOST & ISO Compliance"
+      }
+    ],
+    "link": "Learn More About Us"
+  },
+  "footer": {
+    "contactsHeading": "Contact Information",
+    "phonesLabel": "Phones:",
+    "phoneNumbers": [
+      "+996771777787",
+      "+996508598887"
+    ],
+    "emailLabel": "Email:",
+    "emailAddress": "gispro51@gmail.com",
+    "hoursLabel": "Working Hours:",
+    "hours": "Mon–Fri: 9:00–18:00",
+    "address": "Bishkek, Toktonalieva St., 4B",
+    "navigationHeading": "Navigation",
+    "navigation": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About Us",
+        "href": "/about"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Cases",
+        "href": "/projects"
+      },
+      {
+        "label": "Contact Details",
+        "href": "/contacts"
+      }
+    ],
+    "socialHeading": "Follow Us",
+    "locationHeading": "Our Location",
+    "mapLink": "https://2gis.kg/bishkek/search/ул.%20Токтоналиева%2C%204Б/geo/15763234351132482/74.593911,42.851895?m=74.593986,42.85175/18.2",
+    "companyName": "GISPRO",
+    "copyright": "All rights reserved"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "fields": {
+      "name": "Name/Company",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message (optional)"
+    },
+    "errors": {
+      "name": "Please enter name/company",
+      "emailRequired": "Please enter email",
+      "emailInvalid": "Invalid email format",
+      "phone": "Please enter phone",
+      "send": "Error sending message"
+    },
+    "buttons": {
+      "send": "Send",
+      "sending": "Sending..."
+    },
+    "messages": {
+      "success": "Thank you! Your message has been sent.",
+      "error": "An error occurred while sending. Please try again later."
+    },
+    "emailSubject": "New message from GISPRO website"
+  },
+  "floatingContact": {
+    "contactUs": "Contact Us",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "toggleLabel": "Contacts"
+  },
+  "about": {
+    "hero": {
+      "subtitle": "About Us",
+      "title": "Innovative Geospatial Solutions",
+      "description": "For over ten years we’ve been at the forefront of GIS technology, delivering cutting‑edge solutions for complex spatial challenges across a variety of industries.",
+      "primaryButton": "Our Services",
+      "secondaryButton": "Contact Us"
+    },
+    "company": {
+      "title": "About Our Company",
+      "description1": "Founded in 2014 in Bishkek, our company specializes in end‑to‑end solutions for geographic information systems (GIS), land management, and architectural design.",
+      "description2": "Over 11 years, we’ve successfully completed more than 50 projects across Kyrgyzstan: from digitizing pasture maps to creating interactive 3D maps for educational programs and strategic national‑security sites.",
+      "feature1": "Proprietary Licenses",
+      "feature2": "High‑Precision Equipment",
+      "feature3": "Modern Sensing Methods",
+      "feature4": "Team of Certified Specialists",
+      "feature5": "Projects Across Kyrgyzstan",
+      "feature6": "ISO‑Compliant Processes"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "We develop cutting‑edge geospatial solutions that empower our clients to make informed decisions and achieve their strategic goals."
+    }
+  }
+}

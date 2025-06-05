@@ -1,38 +1,69 @@
 // src/components/ProcessAnimationSection/ProcessAnimationSection.jsx
 import React from 'react';
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Container, Typography, useTheme, useMediaQuery } from '@mui/material';
 import Lottie from 'lottie-react';
-// Импорт вашей Lottie-анимации (скачайте JSON-файл с нужной анимацией)
 import processAnimation from '../../assets/animations/process.json';
+import { useTranslation } from 'react-i18next';
 
 export default function ProcessAnimationSection() {
+    const { t } = useTranslation();
     const theme = useTheme();
+    const isXs = useMediaQuery(theme.breakpoints.down('sm'));
+    const isSm = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+
+    const bg = theme.palette.background.container;
 
     return (
         <Box
             component="section"
             sx={{
-                py: 8,
-                backgroundColor:
-                    theme.palette.mode === 'light' ? '#fafafa' : '#1f2024',
+                py: { xs: 4, sm: 6, md: 8 },
+                backgroundColor: bg,
             }}
         >
-            <Container maxWidth="md" sx={{ textAlign: 'center' }}>
+            <Container
+                maxWidth="md"
+                sx={{
+                    textAlign: 'center',
+                    px: { xs: 2, sm: 3, md: 0 },
+                }}
+            >
+                {/* Заголовок */}
                 <Typography
-                    variant="h4"
+                    variant={isXs ? 'h3' : isSm ? 'h4' : 'h4'}
                     gutterBottom
-                    sx={{ fontFamily: 'Oswald, sans-serif' }}
+                    sx={{
+                        fontFamily: 'Oswald, sans-serif',
+                        fontWeight: 400,
+                        mb: { xs: 1.5, sm: 2.5, md: 4 },
+                        lineHeight: 1.2,
+                        letterSpacing: '0.05em',
+                        color: theme.palette.text.primary,
+                    }}
                 >
-                    Как мы работаем
-                </Typography>
-                <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
-                    От топографической съёмки до готового веб-интерфейса — каждый шаг прозрачный и понятный.
+                    {t('processAnimation.heading')}
                 </Typography>
 
-                {/* Lottie-анимация */}
+                {/* Текст под заголовком */}
+                <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{
+                        mb: { xs: 3, sm: 4, md: 6 },
+                        fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' },
+                        maxWidth: { xs: '100%', md: '80%' },
+                        mx: 'auto',
+                        lineHeight: 1.6,
+                    }}
+                >
+                    {t('processAnimation.subtext')}
+                </Typography>
+
+                {/* Анимация */}
                 <Box
                     sx={{
-                        maxWidth: 400,
+                        width: '100%',
+                        maxWidth: isXs ? 300 : isSm ? 360 : 480,
                         mx: 'auto',
                     }}
                 >
@@ -43,23 +74,6 @@ export default function ProcessAnimationSection() {
                         style={{ width: '100%', height: 'auto' }}
                     />
                 </Box>
-
-                {/*
-        // Альтернативно, если у вас есть видеоролик:
-        <Box
-          component="video"
-          src="/assets/videos/process.mp4"
-          controls
-          loop
-          muted
-          autoPlay
-          sx={{
-            width: '100%',
-            maxWidth: 600,
-            borderRadius: 2,
-          }}
-        />
-        */}
             </Container>
         </Box>
     );

@@ -4,7 +4,6 @@ import {
     Box,
     Container,
     Typography,
-    Grid,
     Card,
     CardContent,
     Avatar,
@@ -12,35 +11,19 @@ import {
 } from '@mui/material';
 
 const teamMembers = [
-    {
-        name: 'Александр Иванов',
-        role: 'Генеральный директор',
-        photo: '/assets/team/alexander.jpg',
-        quote: 'Мне нравится строить команды и делать сложное простым.',
-    },
-    {
-        name: 'Елена Смирнова',
-        role: 'Технический директор',
-        photo: '/assets/team/elena.jpg',
-        quote: 'Каждый новый проект — это шанс применить лучшие инженерные практики.',
-    },
-    {
-        name: 'Дмитрий Кузнецов',
-        role: 'Ведущий геодезист',
-        photo: '/assets/team/dmitry.jpg',
-        quote: 'Геодезия — это наука о точности, а я люблю точность во всём.',
-    },
-    {
-        name: 'Мария Петрова',
-        role: 'UI/UX-дизайнер',
-        photo: '/assets/team/maria.jpg',
-        quote: 'Создавать интуитивно понятные интерфейсы — моя страсть.',
-    },
+    { name: 'Кыдыр',      role: 'Владелец',        photo: '/assets/team/kydyr.jpg',       quote: 'Сильная команда — залог устойчивого роста компании.' },
+    { name: 'Максат',     role: 'Директор',        photo: '/assets/team/maksat.jpg',      quote: 'Хорошее руководство начинается с доверия и прозрачности.' },
+    { name: 'Константин', role: 'Проект-менеджер', photo: '/assets/team/konstantin.jpg', quote: 'Организованность — это двигатель любых проектов.' },
+    { name: 'Жумабубу',   role: 'Документовед',    photo: '/assets/team/zhumabubu.jpg',   quote: 'Правильная документация экономит сотни часов.' },
+    { name: 'Элдияр',     role: 'Программист',     photo: '/assets/team/eldiyar.jpg',     quote: 'Люблю чистый код и сильную архитектуру.' },
+    { name: 'Адилет',     role: 'Программист',     photo: '/assets/team/adilet.jpg',      quote: 'Разработка — это не просто код, это создание ценности.' },
 ];
 
 export default function TeamSection() {
     const theme = useTheme();
-    const bg = theme.palette.mode === 'light' ? '#fafafa' : '#1f2024';
+    const bg = theme.palette.mode === 'light' ? theme.palette.background.container : theme.palette.background.container;
+    const cardBg = theme.palette.mode === 'light' ? theme.palette.background.paper : theme.palette.background.default;
+
 
     return (
         <Box component="section" sx={{ py: 8, backgroundColor: bg }}>
@@ -62,22 +45,27 @@ export default function TeamSection() {
                     Профессионалы, объединённые общей целью — создавать надёжные и масштабируемые решения.
                 </Typography>
 
-                <Grid container spacing={4}>
+                {/* Здесь используем display: grid */}
+                <Box
+                    sx={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(3, 1fr)',
+                        gap: 4,       // отступы между карточками
+                        '& > *': {
+                            height: '360px',             // фиксированная высота карточки
+                            display: 'flex',
+                            flexDirection: 'column',
+                            transition: 'transform 0.3s, box-shadow 0.3s',
+                            '&:hover': {
+                                transform: 'translateY(-4px)',
+                                boxShadow: theme.shadows[6],
+                            }
+                        }
+                    }}
+                >
                     {teamMembers.map((member, idx) => (
-                        <Grid key={idx} item xs={12} sm={6} md={3}>
-                            <Card
-                                sx={{
-                                    textAlign: 'center',
-                                    py: 4,
-                                    backgroundColor: theme.palette.background.paper,
-                                    boxShadow: 2,
-                                    transition: 'transform 0.3s, box-shadow 0.3s',
-                                    '&:hover': {
-                                        transform: 'translateY(-4px)',
-                                        boxShadow: 6,
-                                    }
-                                }}
-                            >
+                        <Card key={idx} sx={{ backgroundColor: cardBg, boxShadow: theme.shadows[2] }}>
+                            <Box sx={{ pt: 4, textAlign: 'center' }}>
                                 <Avatar
                                     src={member.photo}
                                     alt={member.name}
@@ -86,31 +74,24 @@ export default function TeamSection() {
                                         height: 96,
                                         mx: 'auto',
                                         mb: 2,
-                                        border: `2px solid ${theme.palette.primary.main}`
+                                        border: `2px solid ${theme.palette.primary.main}`,
                                     }}
                                 />
-                                <CardContent>
-                                    <Typography
-                                        variant="h6"
-                                        sx={{ fontFamily: 'Oswald, sans-serif', mb: 0.5 }}
-                                    >
-                                        {member.name}
-                                    </Typography>
-                                    <Typography
-                                        variant="subtitle2"
-                                        color="text.secondary"
-                                        sx={{ mb: 1 }}
-                                    >
-                                        {member.role}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        “{member.quote}”
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
+                            </Box>
+                            <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
+                                <Typography variant="h6" sx={{ fontFamily: 'Oswald, sans-serif', mb: 0.5 }}>
+                                    {member.name}
+                                </Typography>
+                                <Typography variant="subtitle2" color="text.secondary" sx={{ mb: 1 }}>
+                                    {member.role}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    “{member.quote}”
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     ))}
-                </Grid>
+                </Box>
             </Container>
         </Box>
     );
